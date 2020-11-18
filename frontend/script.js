@@ -6,7 +6,7 @@ async function register(){
         "phone":document.getElementById("phone").value
     }
     console.log(data);
-    let res = await fetch("http://localhost:3000/register",
+    let res = await fetch("https://node-forget-jwt-app.herokuapp.com/register",
    {
     method:"POST",
     body: JSON.stringify(data),
@@ -24,7 +24,7 @@ async function login(){
         
     }
    // console.log(data);
-    let res = await fetch("http://localhost:3000/login",
+    let res = await fetch("https://node-forget-jwt-app.herokuapp.com/login",
    {
     method:"POST",
     body: JSON.stringify(data),
@@ -43,7 +43,7 @@ console.log(data1);
 
 async function ForgotPassword(){
     let dat = {email:document.getElementById("exampleInputEmail1").value}
-    let data = await fetch("http://localhost:3000/forget",
+    let data = await fetch("https://node-forget-jwt-app.herokuapp.com/users/forget",
     {
         method:"POST",
         body: JSON.stringify(dat),
