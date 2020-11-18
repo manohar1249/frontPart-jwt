@@ -31,13 +31,7 @@ async function login(){
     headers:{"Content-Type":"application/json"}
 });
 let data1 = await res.json();
-if(data1.status==200){
-    let a = document.createElement('a');
-    a.setAttribute('href','https://dazzling-wiles-853ca6.netlify.app/');
-    a.innerHTML='GoToUrlShortner';
-    let b = document.getElementById('goShortUrl');
-    b.append(a);
-}
+
 console.log(data1);
 }
 
